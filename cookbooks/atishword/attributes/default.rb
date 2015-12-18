@@ -1,0 +1,7 @@
+default['wp']['database']['host'] = 'localhost'
+default['wp']['database']['username'] = 'root'
+default['wp']['database']['password'] = 'Today@123'
+default['wp']['database']['dbname'] = 'example_db'
+default['wp']['database']['dbuser'] = 'example_user'
+default['wp']['database']['dbpassword'] = 'Today@123'
+default['wp']['package']['dest'] = '/tmp/wordpress.zip'

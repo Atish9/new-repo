@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+    ServerAdmin atish@tecadmin.net
+    DocumentRoot /var/www/html/wordpress
+    ServerName atish.tecadmin.net
+    <Directory "/var/www/html/wordpress">
+         Allowoverride All
+     </Directory>
+    ErrorLog logs/atish.tecadmin.net-error_log
+    CustomLog logs/atish.tecadmin.net-access_log combined
+</VirtualHost>
