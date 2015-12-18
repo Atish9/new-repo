@@ -44,6 +44,6 @@ end
 mysql_database_user node['wp']['database']['dbuser'] do
   connection mysql_connection_info
   password node['wp']['database']['dbpassword']
-   privileges      [:all] 
+   privileges      [:all]
   action :grant
 end
