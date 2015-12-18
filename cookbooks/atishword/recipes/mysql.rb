@@ -12,6 +12,17 @@ mysql2_chef_gem 'default' do
   action :install
 end
 
+
+# bash "mysql_installation" do
+#   code <<-EOH
+#   mysql -e "update mysql.user set Password = Password('redhat') where User = 'root'"
+#   mysql -e "drop user ''@'localhost'"
+#   mysql -e "drop database test"
+#   mysql -e "flush privileges"
+#   EOH
+# end
+
+
 mysql_database node['wp']['database']['dbname'] do
   connection(
     :host => node['wp']['database']['host'],
@@ -33,5 +44,6 @@ end
 mysql_database_user node['wp']['database']['dbuser'] do
   connection mysql_connection_info
   password node['wp']['database']['dbpassword']
+   privileges      [:all] 
   action :grant
 end

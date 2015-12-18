@@ -18,14 +18,14 @@ end
 
 
 
-bash "mysql_installation" do
-  code <<-EOH
-  mysql -e "update mysql.user set Password = Password('redhat') where User = 'root'"
-  mysql -e "drop user ''@'localhost'"
-  mysql -e "drop database test"
-  mysql -e "flush privileges"
-  EOH
-end
+# bash "mysql_installation" do
+#   code <<-EOH
+#   mysql -e "update mysql.user set Password = Password('redhat') where User = 'root'"
+#   mysql -e "drop user ''@'localhost'"
+#   mysql -e "drop database test"
+#   mysql -e "flush privileges"
+#   EOH
+# end
 
 
 mysql_connection_info = {
